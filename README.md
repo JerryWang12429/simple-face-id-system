@@ -7,6 +7,5 @@ Envirenment :
 -  openCV 3.4.1  
 -  Tkinter 8.6.7  
               
-              
-              
-**Run main program named "gui_Test"**
+                        
+` Run main program named "gui_Test" `
