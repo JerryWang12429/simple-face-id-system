@@ -6,6 +6,5 @@ Envirenment :
 -  python 3.6  
 -  openCV 3.4.1  
 -  Tkinter 8.6.7  
-              
-                        
-` Run main program named "gui_Test" `
+                      
+` execute main program named "gui_Test" `
