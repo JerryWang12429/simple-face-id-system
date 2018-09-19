@@ -3,6 +3,11 @@
 import cv2
 import pickle
 
+
+#import sqlite
+import sqlite3
+conn = sqlite3.connect('FaceID.db')
+
 # Load prebuilt model for Frontal Face
 cascadePath = "haarcascade_frontalface_default.xml"
 
@@ -15,9 +20,7 @@ recognizer.read("face-trainner.yml")
 
 
 labels = {"person_name": 1}
-with open("pickles/face-labels.pickle", 'rb') as f:
-	og_labels = pickle.load(f)
-	labels = {v:k for k,v in og_labels.items()}
+labels = {v:k for k,v in conn.execute("SELECT * FROM Face")}
     
     
 # Set the font style
@@ -70,6 +73,7 @@ while(cap.isOpened()):
   if cv2.waitKey(200) & 0xFF == ord('q'):
     break
 
+conn.close()
 # release and close cam
 cap.release()
 
