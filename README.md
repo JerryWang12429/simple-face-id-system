@@ -12,7 +12,7 @@ Envirenment :
 
 Method
 ---
-Click `camera` button to start the recognizer.
+Click `camera` button to start the recognizer,press 'q' to exit.
 
 You can register your face with `register` button if the name is unknown.
 
