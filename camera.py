@@ -48,7 +48,7 @@ while(cap.isOpened()):
   for(x,y,w,h) in faces:
       roi_gray = gray[y:y+h, x:x+w] #(ycord_start, ycord_end)
       id_, conf = recognizer.predict(roi_gray)
-      if conf>=0 and conf <= 30:
+      if conf>=0 and conf <= 50:
           font = cv2.FONT_HERSHEY_SIMPLEX
           name = labels[id_]
           color = (0, 255, 0)
